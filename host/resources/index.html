@@ -817,6 +817,13 @@
 						<h3 class="text-center">Motors</h3>
 						<button type="button" class="btn btn-block btn-success" onclick="requestForPrinter('motorson', null)">Enable</button>
 						<button type="button" class="btn btn-block btn-danger" onclick="requestForPrinter('motorsoff', null)">Disable</button>
+						<h3 class="text-center">Projector</h3>
+						<button type="button" class="btn btn-block btn-success" onclick="requestForPrinter('gcode', 'M605')">On</button>
+						<button type="button" class="btn btn-block btn-danger" onclick="requestForPrinter('gcode', 'M606')">Off</button>
+						<h3 class="text-center">Shutter</h3>
+						<button type="button" class="btn btn-block btn-success" onclick="requestForPrinter('gcode', 'M280 P1 S90')">Close</button>
+						<button type="button" class="btn btn-block btn-danger" onclick="requestForPrinter('gcode', 'M280 P1 S170')">Open</button>
+
 						<h3 class="text-center">Manual GCode</h3>
 						<div class="row">
 						    <input type="text" class="form-control" id="sendGcodeText" placeholder="gcode">
